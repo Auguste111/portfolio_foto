@@ -42,7 +42,6 @@ export default function LoadingOverlay() {
                             className="mb-6 relative"
                         >
                             <div className="absolute inset-0 bg-brand-accent/20 blur-xl rounded-full" />
-                            <Camera className="h-12 w-12 text-brand-accent relative z-10" />
                         </motion.div>
 
                         <h1 className="text-3xl font-serif text-white tracking-widest uppercase mb-2">
