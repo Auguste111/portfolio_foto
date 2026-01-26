@@ -161,8 +161,9 @@ export default function PhotoDetail({ item, onClose }) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="fixed inset-0 z-[60] bg-black flex items-center justify-center p-0"
-                    onClick={() => setIsFullScreen(false)}
+
                 >
+                    {/* Close Button */}
                     <button
                         onClick={() => setIsFullScreen(false)}
                         className="absolute top-4 right-4 p-4 text-white hover:text-brand-accent z-50 bg-black/20 rounded-full"
@@ -170,12 +171,31 @@ export default function PhotoDetail({ item, onClose }) {
                         <X className="h-8 w-8" />
                     </button>
 
-                    <LoadingImage
-                        src={showOriginal ? item.imageOriginal : item.image}
-                        alt={item.title}
-                        className="w-full h-full flex items-center justify-center p-4"
-                        imageClassName="max-w-full max-h-full object-contain"
-                    />
+                    {/* Toggle Button in Fullscreen */}
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-0 bg-neutral-900/80 backdrop-blur-xl rounded-full p-1 border border-white/10 shadow-lg z-50 pointer-events-auto" onClick={(e) => e.stopPropagation()}>
+                        <button
+                            onClick={() => setShowOriginal(false)}
+                            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${!showOriginal ? 'bg-white text-brand-dark shadow-sm' : 'text-gray-400 hover:text-white'}`}
+                        >
+                            Bewerkt
+                        </button>
+                        <button
+                            onClick={() => setShowOriginal(true)}
+                            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${showOriginal ? 'bg-white text-brand-dark shadow-sm' : 'text-gray-400 hover:text-white'}`}
+                        >
+                            Origineel
+                        </button>
+                    </div>
+
+                    <div className="w-full h-full flex items-center justify-center p-4" onClick={() => setIsFullScreen(false)}>
+                        <LoadingImage
+                            key={showOriginal ? 'original-full' : 'edited-full'}
+                            src={showOriginal ? item.imageOriginal : item.image}
+                            alt={item.title}
+                            className="w-full h-full flex items-center justify-center"
+                            imageClassName="max-w-full max-h-full object-contain"
+                        />
+                    </div>
                 </motion.div>
             )}
         </AnimatePresence>

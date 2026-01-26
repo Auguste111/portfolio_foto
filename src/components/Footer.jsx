@@ -19,9 +19,8 @@ export default function Footer() {
                             Gespecialiseerd in portret, architectuur en productfotografie.
                         </p>
                         <div className="flex space-x-4 pt-2">
-                            <SocialIcon icon={<Instagram size={18} />} href="#" label="Instagram" />
-                            <SocialIcon icon={<Linkedin size={18} />} href="#" label="LinkedIn" />
-                            <SocialIcon icon={<Mail size={18} />} href="mailto:contact@example.com" label="Email" />
+                            <SocialIcon icon={<Instagram size={18} />} href="https://www.instagram.com/snaaier_/" label="Instagram" />
+                            <SocialIcon icon={<Linkedin size={18} />} href="https://www.linkedin.com/in/ingmar-van-rheenen-0a9392290/" label="LinkedIn" />
                         </div>
                     </div>
 
