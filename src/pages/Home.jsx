@@ -47,7 +47,7 @@ export default function Home() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <h2 className="text-brand-accent text-sm md:text-base uppercase tracking-[0.3em] mb-4">
-                            Ingmar van Rheenen
+                            Mark Datema
                         </h2>
                         <h1 className="text-6xl md:text-9xl font-serif text-white mb-6 leading-tight">
                             Vang het <span className="italic text-brand-accent">Moment</span>
@@ -218,7 +218,7 @@ export default function Home() {
                             className="md:w-1/2"
                         >
                             <h4 className="text-brand-accent uppercase tracking-widest text-sm mb-2">De Fotograaf</h4>
-                            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Ingmar van Rheenen</h2>
+                            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Mark Datema</h2>
                             <p className="text-gray-300 text-lg leading-relaxed mb-6">
                                 Fotografie is voor mij meer dan alleen een plaatje schieten; het is kijken met aandacht.
                                 <br /><br />
@@ -267,6 +267,7 @@ function ParallaxImages() {
                     style={{
                         left: img.left,
                         top: img.top,
+
                         y: img.speed,
                         opacity: opacity,
                         rotate: img.rotation,

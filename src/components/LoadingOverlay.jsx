@@ -45,7 +45,7 @@ export default function LoadingOverlay() {
                         </motion.div>
 
                         <h1 className="text-3xl font-serif text-white tracking-widest uppercase mb-2">
-                            Ingmar van Rheenen
+                            Mark Datema
                         </h1>
                         <p className="text-brand-accent/60 text-xs tracking-[0.3em] uppercase">
                             Photography

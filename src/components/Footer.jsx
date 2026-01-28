@@ -12,15 +12,15 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="col-span-1 md:col-span-2 space-y-4">
                         <div className="flex items-center space-x-2 text-white">
-                            <span className="text-xl font-serif tracking-wide">Ingmar van Rheenen</span>
+                            <span className="text-xl font-serif tracking-wide">Mark Datema</span>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
                             Vang het moment. Een portfolio dat passie voor licht, compositie en verhalen combineert.
                             Gespecialiseerd in portret, architectuur en productfotografie.
                         </p>
                         <div className="flex space-x-4 pt-2">
-                            <SocialIcon icon={<Instagram size={18} />} href="https://www.instagram.com/snaaier_/" label="Instagram" />
-                            <SocialIcon icon={<Linkedin size={18} />} href="https://www.linkedin.com/in/ingmar-van-rheenen-0a9392290/" label="LinkedIn" />
+                            <SocialIcon icon={<Instagram size={18} />} href="https://www.instagram.com/mark.datema_/" label="Instagram" />
+                            <SocialIcon icon={<Linkedin size={18} />} href="https://www.linkedin.com/in/mark-datema-a81244273/" label="LinkedIn" />
                         </div>
                     </div>
 
@@ -43,8 +43,8 @@ export default function Footer() {
                                 <span>Amsterdam, Nederland</span>
                             </li>
                             <li className="flex items-center space-x-2">
-                                <a href="mailto:info@ingmarvanrheenen.nl" className="hover:text-brand-accent transition-colors">
-                                    info@ingmarvanrheenen.nl
+                                <a href="mailto:mark090504@gmail.com" className="hover:text-brand-accent transition-colors">
+                                    mark090504@gmail.com
                                 </a>
                             </li>
                         </ul>
@@ -53,7 +53,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                    <p>&copy; {currentYear} Ingmar van Rheenen. Alle rechten voorbehouden.</p>
+                    <p>&copy; {currentYear} Mark Datema. Alle rechten voorbehouden.</p>
                     <div className="flex items-center space-x-1 mt-4 md:mt-0">
                         <span>Gemaakt met</span>
                         <Heart size={12} className="text-brand-accent fill-brand-accent" />

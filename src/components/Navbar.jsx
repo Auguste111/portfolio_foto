@@ -33,25 +33,24 @@ export default function Navbar() {
     const isActive = (path) => location.pathname === path;
 
     return (
-        <nav 
-            className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${
-                scrolled || isOpen 
-                    ? 'bg-brand-dark/95 backdrop-blur-md border-b border-white/10 shadow-lg' 
+        <nav
+            className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${scrolled || isOpen
+                    ? 'bg-brand-dark/95 backdrop-blur-md border-b border-white/10 shadow-lg'
                     : 'bg-transparent border-b border-transparent py-2'
-            }`}
+                }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
-                    
+
                     {/* Logo Area */}
                     <div className="flex-shrink-0">
-                        <Link 
-                            to="/" 
+                        <Link
+                            to="/"
                             className="flex items-center gap-2 group"
                             onClick={() => setIsOpen(false)}
                         >
                             <span className="text-2xl font-serif tracking-widest text-brand-accent group-hover:text-white transition-colors duration-300">
-                                IVR
+                                MD
                             </span>
                         </Link>
                     </div>
@@ -63,17 +62,15 @@ export default function Navbar() {
                                 <Link
                                     key={item.name}
                                     to={item.path}
-                                    className={`relative px-1 py-2 text-sm font-medium tracking-wide uppercase transition-colors duration-300 group ${
-                                        isActive(item.path) 
-                                            ? 'text-brand-accent' 
+                                    className={`relative px-1 py-2 text-sm font-medium tracking-wide uppercase transition-colors duration-300 group ${isActive(item.path)
+                                            ? 'text-brand-accent'
                                             : 'text-gray-300 hover:text-white'
-                                    }`}
+                                        }`}
                                 >
                                     {item.name}
                                     {/* Animated Underline */}
-                                    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-brand-accent transform origin-left transition-transform duration-300 ease-out ${
-                                        isActive(item.path) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                                    }`} />
+                                    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-brand-accent transform origin-left transition-transform duration-300 ease-out ${isActive(item.path) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                                        }`} />
                                 </Link>
                             ))}
                         </div>
@@ -101,10 +98,9 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu (Animated Panel) */}
-            <div 
-                className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`} 
+            <div
+                className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 id="mobile-menu"
             >
                 <div className="px-2 pt-2 pb-3 space-y-1 bg-brand-dark/95 backdrop-blur-md border-b border-white/10 shadow-xl">
@@ -113,11 +109,10 @@ export default function Navbar() {
                             key={item.name}
                             to={item.path}
                             onClick={() => setIsOpen(false)}
-                            className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                                isActive(item.path)
+                            className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.path)
                                     ? 'bg-white/10 text-brand-accent'
                                     : 'text-gray-300 hover:text-white hover:bg-white/5'
-                            }`}
+                                }`}
                         >
                             {item.name}
                         </Link>
