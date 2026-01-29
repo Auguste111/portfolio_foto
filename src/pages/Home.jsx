@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { portfolioItems } from '../data/portfolioData';
 import LoadingImage from '../components/LoadingImage';
 import LoadingOverlay from '../components/LoadingOverlay';
-import IngmarImage from '../assets/home/Ingmar.jpg';
+import MarkImage from '../assets/home/mark_edit.JPG';
 
 export default function Home() {
     const scrollRef = useRef(null);
@@ -200,7 +200,7 @@ export default function Home() {
                             <div className="aspect-[3/4] rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
                                 {/* Placeholder for photographer portrait */}
                                 <LoadingImage
-                                    src={IngmarImage}
+                                    src={MarkImage}
                                     alt="Photographer"
                                     className="w-full h-full"
                                     imageClassName="object-cover"

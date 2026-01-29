@@ -65,7 +65,7 @@ export default function Info() {
                             Ik kijk met trots terug op dit project en zie het als een startpunt voor verdere ontwikkeling in de fotografie.
                         </p>
                         <p className="mt-12 text-brand-accent font-serif italic text-xl">
-                            — Ingmar van Rheenen
+                            — Mark Datema
                         </p>
                     </div>
                 </motion.section>

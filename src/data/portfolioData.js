@@ -7,19 +7,19 @@ import ProductCover from '../assets/product/cover/product_cover.jpg';
 import BestCover from '../assets/Mooiste/cover/mooiste_cover.jpg';
 
 // Architecture Item 1 Images
-import Arch1Image from '../assets/Architectuur/one/stairs_after.jpg';
-import Arch1Original from '../assets/Architectuur/one/stairs_before.jpg';
+import Arch1Image from '../assets/Architectuur/one/gebouw_edit.png';
+import Arch1Original from '../assets/Architectuur/one/gebouw.JPG';
 
 // Product Item 1 Images
-import Product1Image from '../assets/product/one/product_after.jpg';
-import Product1Original from '../assets/product/one/product_before.JPG';
+import Product1Image from '../assets/product/one/product_after.png';
+import Product1Original from '../assets/product/one/product_before.png';
 
 // Product Item 2 Images
 import Product2Image from '../assets/product/two/product_after.jpg';
 import Product2Original from '../assets/product/two/product_before.jpg';
 
 // Portrait Item 1 Images
-import Portrait1Image from '../assets/portret/cover/one/portret_after.jpg';
+import Portrait1Image from '../assets/portret/cover/one/portret_after.png';
 import Portrait1Original from '../assets/portret/cover/one/portret_before.jpg';
 
 // Portrait Item 2 Images
@@ -27,8 +27,8 @@ import Portrait2Image from '../assets/portret/cover/two/rouzbehsayadifar_after.j
 import Portrait2Original from '../assets/portret/cover/two/rouzbehsayadifar_before.jpg';
 
 // Portrait Item 3 Images
-import Portrait3Image from '../assets/portret/cover/three/rouzbehsayadifar_1_after.JPG';
-import Portrait3Original from '../assets/portret/cover/three/rouzbehsayadifar_1_before.jpg';
+import Portrait3Image from '../assets/portret/cover/three/harm_fennis_after.jpg';
+import Portrait3Original from '../assets/portret/cover/three/harm_fennis_after.jpg'; // Using same image as fallback for before
 
 // Personal Items
 import Pers1Image from '../assets/personal/cover/one/paal_after.jpg';
@@ -50,8 +50,16 @@ import Pers6Image from '../assets/personal/cover/boom_after.jpg';
 
 
 // Motion Item 1 Images
-import Motion1Image from '../assets/motion/cover/one/motion_after.jpg';
-import Motion1Original from '../assets/motion/cover/one/motion_before.JPG';
+import Motion1Image from '../assets/motion/cover/one/motion_after.png';
+import Motion1Original from '../assets/motion/cover/one/motion_before.jpg';
+
+// Motion Item 2 Images
+import Motion2Image from '../assets/motion/cover/one/moving_object_after.png';
+import Motion2Original from '../assets/motion/cover/one/moving_object_before.jpg';
+
+// Best Of Items
+import Best1Image from '../assets/Mooiste/one/mooie_after.JPG';
+import Best1Original from '../assets/Mooiste/one/mooie_before.JPG';
 
 export const portfolioCategories = [
     {
@@ -113,15 +121,35 @@ export const portfolioItems = [
         whyInteresting: 'De snelheid en dynamiek van de foto.',
         critique: 'De bewegingsonscherpte van de voorbijrazende auto contrasteert sterk met de statische architectuur. De grauwe lucht draagt bij aan de stedelijke sfeer.',
         specs: { shutter: '1/125s', aperture: 'f/7.1', iso: '100', camera: 'NIKON D5300' },
+        editing: { process: 'Contrast verhoogd, schaduwen opgehelderd, kleurtemperatuur warmer.', comparison: ['Crop', 'Color Grade'] },
         analysis: {
-            composition: 'Diagonale lijnen van het gebouw en de auto.',
-            frame: 'Totaal shot',
-            format: 'Landschap',
-            perspective: 'Ooghoogte',
+            composition: 'Gekozen voor een vierkante kader.',
+            frame: 'Het standpunt is genomen vanuit een vrij hoge plek, waardoor je op het onderwerp neerkijkt.',
+            format: 'Vierkant',
+            perspective: 'IS een soort vogel perspectief. Je kijkt van boven af naar beneden op de bewegende auto.',
             lighting: { direction: 'Diffuus', intensity: 'Bewolkt', source: 'Natuurlijk' },
-            depthOfField: 'Groot, maar onscherpte door beweging',
+            depthOfField: 'Doordat de achtergrond onscherp – in motion is en het object scherp, lijkt het alsof',
+        }
+    },
+    {
+        id: 'm2',
+        categoryId: 'motion',
+        title: 'Moving Object',
+        image: Motion2Image,
+        imageOriginal: Motion2Original,
+        description: 'Een object in beweging vastgelegd.',
+        whyInteresting: 'De bewegingsonscherpte suggereert snelheid.',
+        critique: 'Goede scheiding tussen onderwerp en achtergrond.',
+        specs: { shutter: '', aperture: '', iso: '', camera: '' },
+        analysis: {
+            composition: 'Soort rechthoekige kader',
+            frame: 'Standpunt: total shot. Alles is op de foto waardoor je meer inhoudelijke informatie krijgt van de foto.',
+            format: 'Landschap',
+            perspective: 'Perspectief = als je staand naast de weg staat en je besluit te kijken naar de weg.',
+            lighting: { direction: 'Natuurlijk', intensity: 'Neutraal', source: 'Daglicht' },
+            depthOfField: 'Ik vind dit een mooie foto. Omdat de achtergrond semi-scherp is en het object onscherp kan je uit lezen dat het in beweging is.',
         },
-        editing: { process: 'Contrast verhoogd, schaduwen opgehelderd, kleurtemperatuur warmer.', comparison: ['Crop', 'Color Grade'] }
+        editing: { process: 'Standaard nabewerking.', comparison: ['Retouch'] }
     },
 
     // --- Portrait ---
@@ -146,44 +174,24 @@ export const portfolioItems = [
         editing: { process: 'Zwart-Wit contrast en schaduwen opgehelderd.', comparison: ['Retouch', 'Color Balance'] }
     },
     {
-        id: 'p2',
-        categoryId: 'portrait',
-        title: 'Rouzbeh I',
-        image: Portrait2Image,
-        imageOriginal: Portrait2Original,
-        description: 'Een intiem studio portret dat rust en introspectie uitstraalt.',
-        whyInteresting: 'De fluwelen textuur van de trui contrasteert prachtig met de donkere achtergrond.',
-        critique: 'De zachte verlichting accentueert de gelaatstrekken zonder harde schaduwen, wat zorgt voor een benaderbare uitstraling.',
-        specs: { shutter: '1/125s', aperture: 'f/8.0', iso: '100', camera: 'NIKON D5300' },
-        analysis: {
-            composition: 'Centraal geplaatst met klassieke driekwart houding.',
-            frame: 'Medium shot',
-            format: 'Portret',
-            perspective: 'Ooghoogte',
-            lighting: { direction: 'Zacht zijlicht', intensity: 'Gedempt', source: 'Softbox' },
-            depthOfField: 'Scherp op de ogen, zachte fall-off naar achteren.',
-        },
-        editing: { process: 'Huidtonen geëgaliseerd en zwartwaarden verdiept.', comparison: ['Retouch', 'Color Grading'] }
-    },
-    {
         id: 'p3',
         categoryId: 'portrait',
-        title: 'Rouzbeh II',
+        title: 'Harm Fennis',
         image: Portrait3Image,
         imageOriginal: Portrait3Original,
-        description: 'Een profiel portret dat speelt met houding en ondersteuning.',
-        whyInteresting: 'De interactie met de stoel voegt een narratief element toe aan de compositie.',
-        critique: 'De pose is onconventioneel en trekt de aandacht naar de lijn van de nek en kaak.',
-        specs: { shutter: '1/160s', aperture: 'f/5.6', iso: '200', camera: 'NIKON D5300' },
+        description: 'Een portret foto.',
+        whyInteresting: 'Ik vind het een mooie foto.',
+        critique: 'Ik vind het een nette en scherpe portret foto. Door de grijs witte effect lijkt het op een oldtimer. Ben er tevreden mee. Kon wat meer spelen met schaduwen poses etc.',
+        specs: { shutter: '', aperture: '', iso: '', camera: '' },
         analysis: {
-            composition: 'Zijaanzicht (profiel) met diagonale lijnen van de stoel.',
+            composition: 'Verticaal',
             frame: 'Medium shot',
-            format: 'Landschap',
-            perspective: 'Ooghoogte',
-            lighting: { direction: 'Rembrandt-achtig', intensity: 'Contrastrijk', source: 'Studioflitser' },
-            depthOfField: 'Focus op het profiel.',
+            format: 'Portret',
+            perspective: 'Regular – staande perspectief',
+            lighting: { direction: 'Zacht', intensity: 'Normaal', source: 'Studio' },
+            depthOfField: 'Standpunten: staand recht tegenover de persoon',
         },
-        editing: { process: 'Contrast verhoogd om de vormen te accentueren.', comparison: ['Retouch', 'Contrast'] }
+        editing: { process: 'Zwart-wit conversie.', comparison: ['Retouch', 'Contrast'] }
     },
 
     // --- Personal ---
@@ -312,23 +320,43 @@ export const portfolioItems = [
     {
         id: 'pr2',
         categoryId: 'product',
-        title: 'Monster',
+        title: 'Item Case',
         image: Product2Image,
         imageOriginal: Product2Original,
-        description: 'Low-key productshot van een blikje.',
-        whyInteresting: 'De mysterieuze sfeer door randverlichting.',
-        critique: 'Rim lighting (randverlichting) scheidt het onderwerp van de achtergrond.',
+        description: 'Een productfoto.',
+        whyInteresting: 'Mooie scherpe foto op het item houder.',
+        critique: 'mocht wat meer gespeeld worden met belichting - om het nog aantrekkelijker te maken.',
         specs: { shutter: '1/100s', aperture: 'f/18', iso: '200', camera: 'NIKON D5600' },
         analysis: {
-            composition: 'Liggend, centraal',
-            frame: 'Medium',
+            composition: 'Cirkel',
+            frame: 'Total-shot',
             format: 'Landschap',
-            perspective: 'Ooghoogte',
+            perspective: 'Vogel perspectief',
             lighting: { direction: 'Rim light', intensity: 'Accent', source: 'Studio' },
-            depthOfField: 'Scherp',
+            depthOfField: 'Standpunt: rechtvoor het product. Toelichting: Mooie scherpe foto op het item houder - wat goed weergeeft wat je erin kan opslaan en door de belichting is alles goed herkenbaar.',
         },
         editing: { process: 'Lokale contrasten, kleurkalibratie.', comparison: ['Contrast', 'Color'] }
     },
 
     // --- Best Of ---
+    {
+        id: 'b1',
+        categoryId: 'best',
+        title: 'Vogeltje',
+        image: Best1Image,
+        imageOriginal: Best1Original,
+        description: 'Een vogel zoekend naar eten.',
+        whyInteresting: 'De kleurvariatie en focus.',
+        critique: 'Enorm mooie foto waar je een vogeltje ziet zoeken naar eten op een natte achtergrond. de kleur variatie en de vervaagde zijkant zorgt dat de aandacht echt valt op de vogel.',
+        specs: { shutter: '', aperture: '', iso: '', camera: '' },
+        analysis: {
+            composition: 'Horizontaal',
+            frame: 'Total-shot',
+            format: 'Landschap',
+            perspective: 'Vogelperspectief',
+            lighting: { direction: 'Natuurlijk', intensity: 'Neutraal', source: 'Daglicht' },
+            depthOfField: 'Standpunt: vlak naast de vogel',
+        },
+        editing: { process: 'Standaard nabewerking.', comparison: ['Retouch'] }
+    },
 ];
