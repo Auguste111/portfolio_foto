@@ -19,7 +19,7 @@ import Product2Image from '../assets/product/two/product_after.jpg';
 import Product2Original from '../assets/product/two/product_before.jpg';
 
 // Portrait Item 1 Images
-import Portrait1Image from '../assets/portret/cover/one/portret_after.png';
+import Portrait1Image from '../assets/portret/cover/one/portret_after.jpg';
 import Portrait1Original from '../assets/portret/cover/one/portret_before.jpg';
 
 // Portrait Item 2 Images
@@ -31,22 +31,19 @@ import Portrait3Image from '../assets/portret/cover/three/harm_fennis_after.jpg'
 import Portrait3Original from '../assets/portret/cover/three/harm_fennis_after.jpg'; // Using same image as fallback for before
 
 // Personal Items
-import Pers1Image from '../assets/personal/cover/one/paal_after.jpg';
-import Pers1Original from '../assets/personal/cover/one/paal_before.jpg';
+import Pers1Image from '../assets/personal/cover/one/dier_after.jpg';
+import Pers1Original from '../assets/personal/cover/one/dier_before.jpg';
 
-import Pers2Image from '../assets/personal/cover/two/plant_after.jpg';
-import Pers2Original from '../assets/personal/cover/two/plant_before.jpg';
+import Pers2Image from '../assets/personal/cover/two/diertje_after.jpg';
+import Pers2Original from '../assets/personal/cover/two/diertje_before.jpg';
 
-import Pers3Image from '../assets/personal/cover/three/kraan_after.jpg';
-import Pers3Original from '../assets/personal/cover/three/kraan_before.jpg';
+import Pers3Image from '../assets/personal/cover/three/diertje_after.jpg';
+import Pers3Original from '../assets/personal/cover/three/diertje_before.jpg';
 
-import Pers4Image from '../assets/personal/cover/four/boom_after (2).jpg';
-import Pers4Original from '../assets/personal/cover/four/boom_before (2).jpg';
-
-import Pers5Image from '../assets/personal/cover/five/lamp_before.jpg'; // Using before as main if after is missing, or single image
+import Pers4Image from '../assets/personal/cover/four/wolf_after.jpg';
+import Pers4Original from '../assets/personal/cover/four/wolf_before.jpg';
 
 import Pers6Image from '../assets/personal/cover/boom_after.jpg';
-// Assuming boom_before.jpg exists or single image
 
 
 // Motion Item 1 Images
@@ -198,67 +195,54 @@ export const portfolioItems = [
     {
         id: 'pers1',
         categoryId: 'personal',
-        title: 'Fundering',
+        title: 'Dier',
         image: Pers1Image,
         imageOriginal: Pers1Original,
-        description: 'Een spel van licht en schaduw onder de pier.',
-        whyInteresting: 'De ritmische herhaling van de betonnen pilaren creëert diepte en structuur.',
-        critique: 'De warme gloed van de zon op het kille beton zorgt voor een interessant contrast in temperatuur en materiaal.',
+        description: 'Een prachtig moment vastgelegd.',
+        whyInteresting: 'De focus en compositie maken dit een sterk beeld.',
+        critique: 'Goede scherpte en kleurbalans.',
         specs: { shutter: '', aperture: '', iso: '', camera: '' },
-        analysis: { composition: 'Repetitie en lijnenperspectief.', frame: 'Totaal shot', format: 'Landschap', perspective: 'Ooghoogte', lighting: { direction: 'Zijlicht (gouden uur)', intensity: 'Hard', source: 'Zon' }, depthOfField: 'Grote scherptediepte.' },
-        editing: { process: 'Contrast verhoogd om de texturen in het zand te benadrukken.', comparison: ['Retouch'] }
+        analysis: { composition: 'Centraal', frame: 'Medium shot', format: 'Landschap', perspective: 'Ooghoogte', lighting: { direction: 'Natuurlijk', intensity: 'Zacht', source: 'Daglicht' }, depthOfField: 'Ondiep' },
+        editing: { process: 'Basis nabewerking.', comparison: ['Retouch'] }
     },
     {
         id: 'pers2',
         categoryId: 'personal',
-        title: 'Duinlandschap',
+        title: 'Diertje',
         image: Pers2Image,
         imageOriginal: Pers2Original,
-        description: 'De wind gevangen in het helmgras.',
-        whyInteresting: 'De textuur van het zand en de dynamiek van het gras vertellen het verhaal van de kust.',
-        critique: 'Het lage standpunt trekt de kijker direct het landschap in, waarbij de voorgrond de diepte versterkt.',
+        description: 'Detailopname in de natuur.',
+        whyInteresting: 'De textuur en details zijn goed zichtbaar.',
+        critique: 'Mooie scheiding van de achtergrond.',
         specs: { shutter: '', aperture: '', iso: '', camera: '' },
-        analysis: { composition: 'Diagonaal (duinlijn).', frame: 'Medium shot', format: 'Landschap', perspective: 'Kikvorsperspectief', lighting: { direction: 'Strijklicht', intensity: 'Zacht', source: 'Natuurlijk' }, depthOfField: 'Focus op voorgrondgras.' },
-        editing: { process: 'Warme tonen versterkt.', comparison: ['Retouch'] }
+        analysis: { composition: 'Derdenregel', frame: 'Close-up', format: 'Landschap', perspective: 'Ooghoogte', lighting: { direction: 'Zacht', intensity: 'Normaal', source: 'Natuurlijk' }, depthOfField: 'Ondiep' },
+        editing: { process: 'Kleurcorrectie toegepast.', comparison: ['Retouch'] }
     },
     {
         id: 'pers3',
         categoryId: 'personal',
-        title: 'Ochtendmist',
+        title: 'Diertje in detail',
         image: Pers3Image,
         imageOriginal: Pers3Original,
-        description: 'Industriële stilte in de vroege morgen.',
-        whyInteresting: 'De mist abstraheert de vormen van de bouwkraan, waardoor een minimalistisch beeld ontstaat.',
-        critique: 'De subtiele kleurovergangen in de lucht (van koel naar warm) geven sfeer aan het silhouet.',
+        description: 'Een intieme blik op de natuur.',
+        whyInteresting: 'Het onderwerp springt er echt uit.',
+        critique: 'Scherp op de juiste plek.',
         specs: { shutter: '', aperture: '', iso: '', camera: '' },
-        analysis: { composition: 'Derdenregel (kraan).', frame: 'Ver weg', format: 'Landschap', perspective: 'Neutraal', lighting: { direction: 'Diffuus', intensity: 'Zwak', source: 'Atmosferisch' }, depthOfField: 'Oneindig' },
-        editing: { process: 'Nevelreductie toegepast voor iets meer definitie.', comparison: ['Retouch'] }
+        analysis: { composition: 'Centraal', frame: 'Close-up', format: 'Landschap', perspective: 'Ooghoogte', lighting: { direction: 'Natuurlijk', intensity: 'Zacht', source: 'Daglicht' }, depthOfField: 'Ondiep' },
+        editing: { process: 'Contrast en scherpte aangepast.', comparison: ['Retouch'] }
     },
     {
         id: 'pers4',
         categoryId: 'personal',
-        title: 'Natuur-architectuur',
+        title: 'Wolf',
         image: Pers4Image,
         imageOriginal: Pers4Original,
-        description: 'Patronen en structuren in boomschors.',
-        whyInteresting: 'De close-up onthult details die normaal aan het oog ontsnappen, bijna als een abstract schilderij.',
-        critique: 'De verticale lijnen trekken de blik omhoog, en het mos voegt een mooie kleurvariatie toe aan de bruine tinten.',
+        description: 'Een krachtig portret van een wolf.',
+        whyInteresting: 'De intense blik en de vachtstructuur.',
+        critique: 'Indrukwekkend onderwerp met goede belichting.',
         specs: { shutter: '', aperture: '', iso: '', camera: '' },
-        analysis: { composition: 'Centraal / Textuur.', frame: 'Close-up / Kikvorsperspectief', format: 'Portret', perspective: 'Kikvorsperspectief', lighting: { direction: 'Diffuus', intensity: 'Gelijkmatig', source: 'Schaduw' }, depthOfField: 'Ondiep makro-effect.' },
-        editing: { process: 'Scherpte en structuur (clarity) verhoogd.', comparison: ['Retouch'] }
-    },
-    {
-        id: 'pers5',
-        categoryId: 'personal',
-        title: 'Gloed',
-        image: Pers5Image,
-        imageOriginal: Pers5Image,
-        description: 'De schoonheid van techniek in detail.',
-        whyInteresting: 'De gloeidraad vormt een perfecte spiraal die licht geeft in de duisternis.',
-        critique: 'Het sterke contrast tussen de felle draad en de zwarte achtergrond maakt dit een krachtig grafisch beeld.',
-        specs: { shutter: '', aperture: '', iso: '', camera: '' },
-        analysis: { composition: 'Centraal.', frame: 'Macro', format: 'Landschap', perspective: 'Recht van voren', lighting: { direction: 'Interne bron', intensity: 'Fel', source: 'Kunstlicht' }, depthOfField: 'Zeer ondiep (focus op draad).' },
-        editing: { process: 'Hooglichten beheerst, zwartpunt verlaagd.', comparison: ['Retouch'] }
+        analysis: { composition: 'Portret', frame: 'Medium shot', format: 'Portret', perspective: 'Ooghoogte', lighting: { direction: 'Zijlicht', intensity: 'Hard', source: 'Zonlicht' }, depthOfField: 'Focus op ogen.' },
+        editing: { process: 'Scherpte verhoogd.', comparison: ['Retouch'] }
     },
     {
         id: 'pers6',
